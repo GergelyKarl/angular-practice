@@ -1,0 +1,75 @@
+<mat-form-field appearance="standard">
+  <mat-label>Filter</mat-label>
+  <input #input (keyup)="applyFilter($event)" matInput />
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+  <table [dataSource]="dataSource" mat-table matSort>
+    <ng-container matColumnDef="name">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>Name</th>
+      <td *matCellDef="let row" mat-cell>
+        {{ row.name }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cbox">
+      <th *matHeaderCellDef mat-header-cell>
+        Auto calc.
+        <mat-checkbox (change)="getAuto($event)"></mat-checkbox>
+      </th>
+      <td *matCellDef="let row" mat-cell></td>
+    </ng-container>
+
+    <ng-container matColumnDef="net">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>Net</th>
+      <td *matCellDef="let row" mat-cell>{{ row.net }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="vat">
+      <th *matHeaderCellDef mat-header-cell>
+        <form (submit)="onFormSubmit()" [formGroup]="myForm">
+          <mat-form-field class="form">
+            <mat-select formControlName="category">
+              <ng-container *ngFor="let category of labels">
+                <mat-option [value]="category"> {{ category }} %</mat-option>
+              </ng-container>
+            </mat-select>
+          </mat-form-field>
+          <button>Send</button>
+        </form>
+      </th>
+      <td *matCellDef="let row" mat-cell></td>
+    </ng-container>
+
+    <ng-container matColumnDef="gr">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header>Gr</th>
+      <td *matCellDef="let row" mat-cell>
+        <p *ngIf="isChecked; else qwe">
+          {{ (row.net * (actualVat / 100 + 1)).toFixed() }}
+        </p>
+        <ng-template #qwe>n.a</ng-template>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="icon">
+      <th *matHeaderCellDef mat-header-cell mat-sort-header></th>
+      <td *matCellDef="let row" mat-cell>
+        <mat-icon [routerLink]="['/details', row.id]">edit</mat-icon>
+      </td>
+    </ng-container>
+
+    <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+    <tr *matRowDef="let row; columns: displayedColumns" mat-row></tr>
+
+    <tr *matNoDataRow class="mat-row">
+      <td class="mat-cell" colspan="4">
+        No data matching the filter "{{ input.value }}"
+      </td>
+    </tr>
+  </table>
+
+  <mat-paginator
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    aria-label="Select page of users"
+  ></mat-paginator>
+</div>

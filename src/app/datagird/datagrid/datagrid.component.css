@@ -1,0 +1,24 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 50px;
+  text-align: center;
+}
+
+td,
+th {
+  width: 20%;
+}
+
+.mat-header-cell,
+.mat-sort-header,
+.cdk-header-cell,
+.ng-tns-c91-1,
+.cdk-column-name,
+.mat-column-name,
+.ng-star-inserted {
+  width: 150px;
+}

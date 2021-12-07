@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+  align-items: center;
+}
+
+.item_details_form {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+.item_details_form input {
+  margin: 15px 0;
+}
+
+.item_details_form label {
+  font-weight: 700;
+}
+
+.item_update_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 100px;
+  border: 1px solid black;
+  height: 550px;
+  width: 500px;
+}
+
+.item_update_form input {
+  margin: 15px 0;
+}
+
+.item_update_form label {
+  width: 250px;
+  text-align: right;
+}

@@ -1,0 +1,41 @@
+<div class="container">
+  <form class="item_details_form">
+    <h2>Item Details</h2>
+    <ng-container *ngFor="let v of singleProduct | keyvalue">
+      <label [htmlFor]="v.value">{{ v.key }} :</label>
+      <input [value]="v.value" type="text" />
+    </ng-container>
+  </form>
+
+  <form
+    (ngSubmit)="onSubmit(updateForm.value)"
+    [formGroup]="updateForm"
+    class="item_update_form"
+  >
+    <h2>New Item</h2>
+    <label for="id">
+      id:
+      <input
+        formControlName="id"
+        id="id"
+        placeholder="id"
+        required
+        type="text"
+      />
+    </label>
+    <label for="id">
+      name:
+      <input formControlName="name" id="name" type="text" />
+    </label>
+    <label for="id">
+      net:
+      <input formControlName="net" id="net" type="text" />
+    </label>
+
+    <label for="vat">
+      vat:
+      <input formControlName="vat" id="vat" type="text" />
+    </label>
+    <button type="submit">Update</button>
+  </form>
+</div>
