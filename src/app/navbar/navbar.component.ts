@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {GetAPIService} from '../core/get-api.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -6,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  constructor() {}
+  cartArr: any = [];
 
-  ngOnInit(): void {}
+  constructor(private getCartArr: GetAPIService) {
+  }
+
+
+  ngOnInit(): void {
+    this.getCartArr.getCartArr().subscribe(data => this.cartArr = data);
+  }
+
+
 }

@@ -1,6 +1,6 @@
 <mat-form-field appearance="standard">
   <mat-label>Filter</mat-label>
-  <input #input (keyup)="applyFilter($event)" matInput />
+  <input #input (keyup)="applyFilter($event)" matInput/>
 </mat-form-field>
 
 <div class="mat-elevation-z8">
@@ -35,7 +35,7 @@
               </ng-container>
             </mat-select>
           </mat-form-field>
-          <button>Send</button>
+          <button color="primary" mat-raised-button style="margin-left: 8px">Send</button>
         </form>
       </th>
       <td *matCellDef="let row" mat-cell></td>

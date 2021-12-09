@@ -1,0 +1,33 @@
+.product_container {
+  height: 28rem;
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 3rem;
+  cursor: pointer;
+
+}
+
+.product_container p {
+  font-size: 20px;
+}
+
+.product_price {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.product_name {
+  font-weight: 400;
+}
+
+.button_container {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}

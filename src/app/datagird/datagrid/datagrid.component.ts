@@ -1,15 +1,15 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { GetAPIService } from '../../core/get-api.service';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import {MatTableDataSource} from '@angular/material/table';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {GetAPIService} from '../../core/get-api.service';
 
 export interface InputData {
   id: number;
   name: string;
   net: number;
-  vat: number;
+
 }
 
 @Component({

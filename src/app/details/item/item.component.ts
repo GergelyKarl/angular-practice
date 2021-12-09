@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { GetAPIService } from '../../core/get-api.service';
-import { InputData } from '../../datagird/datagrid/datagrid.component';
-import { ActivatedRoute, Params, Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {GetAPIService} from '../../core/get-api.service';
+import {InputData} from '../../datagird/datagrid/datagrid.component';
+import {ActivatedRoute, Params, Router} from '@angular/router';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-item',
@@ -21,7 +21,8 @@ export class ItemComponent implements OnInit {
     private router: Router,
     private fb: FormBuilder,
     private postService: GetAPIService
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
     this.param = this.route.snapshot.paramMap.get('id');
@@ -39,7 +40,7 @@ export class ItemComponent implements OnInit {
       id: null,
       name: '',
       net: null,
-      vat: null,
+
     });
   }
 
@@ -48,4 +49,6 @@ export class ItemComponent implements OnInit {
 
     this.postService.postProduct(obj).subscribe((data) => console.log(data));
   }
+
+
 }

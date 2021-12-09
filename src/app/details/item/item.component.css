@@ -1,7 +1,7 @@
 .container {
   display: flex;
   justify-content: space-around;
-  margin-top: 100px;
+  margin-top: 5rem;
   align-items: center;
 }
 
@@ -9,10 +9,23 @@
   display: flex;
   flex-direction: column;
   width: 20%;
+  border: 1px solid black;
+  height: 34rem;
+  width: 31rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .item_details_form input {
-  margin: 15px 0;
+  margin: 1rem 0;
+  width: 50%;
+  text-align: center;
+}
+
+.item_update_form input:focus {
+  outline: none;
 }
 
 .item_details_form label {
@@ -24,14 +37,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-right: 100px;
+  margin-right: 6.5rem;
   border: 1px solid black;
-  height: 550px;
-  width: 500px;
+  height: 34rem;
+  width: 31rem;
+
 }
 
 .item_update_form input {
-  margin: 15px 0;
+  margin: 1rem 0;
+
 }
 
 .item_update_form label {
