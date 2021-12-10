@@ -3,6 +3,7 @@ import {GetAPIService} from '../../core/get-api.service';
 import {InputData} from '../../datagird/datagrid/datagrid.component';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-item',

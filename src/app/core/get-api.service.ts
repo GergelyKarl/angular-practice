@@ -4,6 +4,7 @@ import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {InputData} from '../datagird/datagrid/datagrid.component';
 
+
 @Injectable({
   providedIn: 'root',
 })
@@ -11,7 +12,7 @@ export class GetAPIService {
   public _url: string = 'http://localhost:3000/products';
   public cart_url = 'http://localhost:3000/cart';
 
-  constructor(private http: HttpClient) {
+  constructor(public http: HttpClient) {
   }
 
   getProducts(): Observable<InputData[]> {

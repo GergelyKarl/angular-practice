@@ -8,6 +8,8 @@ import {NavbarComponent} from './navbar/navbar.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {CommonModule} from '@angular/common';
+//import {HttpClientModule} from '@angular/common/http';
+import {GetAPIService} from './core/get-api.service';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent],
@@ -19,6 +21,7 @@ import {CommonModule} from '@angular/common';
     BrowserAnimationsModule,
     MatIconModule,
     MatToolbarModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],

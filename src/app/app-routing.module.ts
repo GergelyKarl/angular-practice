@@ -17,11 +17,22 @@ const routes: Routes = [
     path: '',
     loadChildren: () =>
       import('./store/store.module').then((m) => m.StoreModule),
+  }, {
+
+    path: '',
+    loadChildren: () =>
+      import('./core/core.module').then((m) => m.CoreModule),
   },
   {
     path: '',
     loadChildren: () =>
       import('./details/details.module').then((m) => m.DetailsModule),
+  },
+
+  {
+    path: '',
+    loadChildren: () =>
+      import('./app.module').then((m) => m.AppModule),
   },
   {
     path: '**',

@@ -1,6 +1,8 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ProductItemComponent } from './product-item.component';
+import {ProductItemComponent} from './product-item.component';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {GetAPIService} from '../../../core/get-api.service';
 
 describe('ProductItemComponent', () => {
   let component: ProductItemComponent;
@@ -8,9 +10,9 @@ describe('ProductItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProductItemComponent ]
+      declarations: [ProductItemComponent], imports: [HttpClientTestingModule], providers: [GetAPIService]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
