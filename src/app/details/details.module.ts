@@ -1,14 +1,20 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {ReactiveFormsModule} from '@angular/forms';
-import {DetailsRoutingModule} from './details-routing.module';
-import {ItemComponent} from './item/item.component';
-import {GetAPIService} from '../core/get-api.service';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DetailsRoutingModule } from './details-routing.module';
+import { ItemComponent } from './item/item.component';
+import { getApiService } from '../core/api.service';
+import { AddItemComponent } from './add-item/add-item.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-  declarations: [ItemComponent],
-  imports: [CommonModule, DetailsRoutingModule, ReactiveFormsModule],
-  providers: [GetAPIService]
+  declarations: [ItemComponent, AddItemComponent, ItemComponent],
+  imports: [
+    CommonModule,
+    DetailsRoutingModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+  ],
+  providers: [],
 })
-export class DetailsModule {
-}
+export class DetailsModule {}

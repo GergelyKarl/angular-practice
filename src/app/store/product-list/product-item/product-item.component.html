@@ -1,12 +1,15 @@
 <div class="product_container">
-  <p>ID: {{id}}</p>
-  <h1><span class="product_name">Name:</span> {{name}}</h1>
-  <p>Net Price: <span class="product_price">{{net}}</span></p>
+  <p>ID: {{ id }}</p>
+  <h1><span class="product_name">Name:</span> {{ name }}</h1>
+  <p>
+    Net Price: <span class="product_price">{{ net }}</span>
+  </p>
   <div class="button_container">
-    <button color="primary" mat-raised-button routerLink="/details/{{id}}">Details</button>
-    <button (click)="addToCart()" color="warn" mat-raised-button type="button">Add To Cart</button>
-
+    <button color="primary" mat-raised-button routerLink="/details/[id]">
+      Details
+    </button>
+    <button (click)="addToCart()" color="warn" mat-raised-button type="button">
+      Add To Cart
+    </button>
   </div>
-
 </div>
-

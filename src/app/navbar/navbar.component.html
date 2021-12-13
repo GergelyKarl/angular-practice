@@ -5,7 +5,10 @@
       <span class="example-spacer"></span>
       <p routerLink="/">Home</p>
       <p routerLink="/public">Store</p>
-      <p routerLink="/cart">Cart <span>({{cartArr.length   }})</span></p>
+      <p routerLink="/cart">
+        Cart <span>({{ cartArr.length }})</span>
+      </p>
+      <p routerLink="/add">Add Item</p>
       <p routerLink="/">About</p>
     </mat-toolbar-row>
   </mat-toolbar>

@@ -3,36 +3,7 @@
     <h2>Item Details</h2>
     <ng-container *ngFor="let v of singleProduct | keyvalue">
       <label [htmlFor]="v.value">{{ v.key }} :</label>
-      <input [value]="v.value" type="text"/>
+      <input [value]="v.value" type="text" />
     </ng-container>
-  </form>
-
-  <form
-    (ngSubmit)="onSubmit(updateForm.value)"
-    [formGroup]="updateForm"
-    class="item_update_form"
-  >
-    <h2>Add New Item</h2>
-    <label for="id">
-      id:
-      <input
-        formControlName="id"
-        id="id"
-        placeholder="id"
-        required
-        type="text"
-      />
-    </label>
-    <label for="name">
-      name:
-      <input formControlName="name" id="name" placeholder="John Doe" type="text"/>
-    </label>
-    <label for="net">
-      net_price:
-      <input formControlName="net" id="net" placeholder="99999" type="text"/>
-    </label>
-
-
-    <button type="submit">Update</button>
   </form>
 </div>

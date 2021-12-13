@@ -1,27 +1,24 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {GetAPIService} from '../../../core/get-api.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { getApiService } from '../../../core/api.service';
 
 @Component({
   selector: 'app-product-item',
   templateUrl: './product-item.component.html',
-  styleUrls: ['./product-item.component.css']
+  styleUrls: ['./product-item.component.css'],
 })
 export class ProductItemComponent implements OnInit {
   @Input() id: number;
   @Input() name: string;
   @Input() net: number;
   cartArray: Array<any> = [];
+ 
+  constructor(private postCart: getApiService) {}
 
-  constructor(private postCart: GetAPIService) {
-  }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   addToCart() {
-
-    this.postCart.postCart({pid: this.id, name: this.name, net: this.net}).subscribe(data => console.log(data));
-
+    this.postCart
+      .postCart({ pid: this.id, name: this.name, net: this.net })
+      .subscribe();
   }
-
 }

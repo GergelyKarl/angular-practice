@@ -1,18 +1,16 @@
-import {Component, OnInit} from '@angular/core';
-import {GetAPIService} from '../../core/get-api.service';
-import {InputData} from '../../datagird/datagrid/datagrid.component';
-
+import { Component, OnInit } from '@angular/core';
+import { InputData } from 'src/app/interfaces/InputData';
+import { getApiService } from '../../core/api.service';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css'], providers: [GetAPIService]
+  styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent implements OnInit {
   productArray: InputData[];
 
-  constructor(private getProductsArr: GetAPIService) {
-  }
+  constructor(private getProductsArr: getApiService) {}
 
   getArray() {
     this.getProductsArr.getProducts().subscribe((item: InputData[]) => {

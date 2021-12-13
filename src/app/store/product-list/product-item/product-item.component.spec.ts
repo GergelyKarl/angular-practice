@@ -2,7 +2,7 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {ProductItemComponent} from './product-item.component';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
-import {GetAPIService} from '../../../core/get-api.service';
+import {getApiService} from '../../../core/api.service';
 
 describe('ProductItemComponent', () => {
   let component: ProductItemComponent;
@@ -10,7 +10,7 @@ describe('ProductItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ProductItemComponent], imports: [HttpClientTestingModule], providers: [GetAPIService]
+      declarations: [ProductItemComponent], imports: [HttpClientTestingModule], providers: [getApiService]
     })
       .compileComponents();
   });

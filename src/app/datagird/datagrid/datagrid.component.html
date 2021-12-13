@@ -1,6 +1,7 @@
 <mat-form-field appearance="standard">
   <mat-label>Filter</mat-label>
-  <input #input (keyup)="applyFilter($event)" matInput/>
+  <!-- ne keyup esemenyt hasznalj, hanem bind-olj ra egy FormControl-t -->
+  <input #input (keyup)="applyFilter($event)" matInput />
 </mat-form-field>
 
 <div class="mat-elevation-z8">
@@ -35,7 +36,9 @@
               </ng-container>
             </mat-select>
           </mat-form-field>
-          <button color="primary" mat-raised-button style="margin-left: 8px">Send</button>
+          <button color="primary" mat-raised-button style="margin-left: 8px">
+            Send
+          </button>
         </form>
       </th>
       <td *matCellDef="let row" mat-cell></td>
@@ -44,14 +47,15 @@
     <ng-container matColumnDef="gr">
       <th *matHeaderCellDef mat-header-cell mat-sort-header>Gr</th>
       <td *matCellDef="let row" mat-cell>
-        <p *ngIf="isChecked; else qwe">
+        <p *ngIf="isChecked; else grTemplate">
           {{ (row.net * (actualVat / 100 + 1)).toFixed() }}
         </p>
-        <ng-template #qwe>n.a</ng-template>
+        <ng-template #grTemplate>n.a</ng-template>
       </td>
     </ng-container>
 
     <ng-container matColumnDef="icon">
+      <!-- RV: mat-sort-header -hez hianyzik egy module import! -->
       <th *matHeaderCellDef mat-header-cell mat-sort-header></th>
       <td *matCellDef="let row" mat-cell>
         <mat-icon [routerLink]="['/details', row.id]">edit</mat-icon>

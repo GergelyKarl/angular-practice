@@ -1,16 +1,10 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {GetAPIService} from '../../core/get-api.service';
-
-export interface InputData {
-  id: number;
-  name: string;
-  net: number;
-
-}
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { getApiService } from '../../core/api.service';
+import { InputData } from 'src/app/interfaces/InputData';
 
 @Component({
   selector: 'app-root',
@@ -18,17 +12,20 @@ export interface InputData {
   templateUrl: 'datagrid.component.html',
 })
 export class DatagridComponent implements OnInit {
-  displayedColumns: string[] = ['name', 'cbox', 'net', 'vat', 'gr', 'icon'];
+  displayedColumns = ['name', 'cbox', 'net', 'vat', 'gr', 'icon'];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   dataSource;
-  productArr!: InputData[];
-  myForm!: FormGroup;
+  productArr: InputData[];
+  myForm: FormGroup;
   labels = [27, 20, 5];
-  actualVat: number = 27;
-  isChecked: boolean = false;
+  actualVat = 27;
+  isChecked = false;
 
-  constructor(private fb: FormBuilder, private productsService: GetAPIService) {
+  /**
+   * RV: FormBuilder hasznalata felesleges
+   */
+  constructor(private fb: FormBuilder, private productsService: getApiService) {
     this.dataSource = new MatTableDataSource(this.productArr);
   }
 

@@ -1,9 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {GetAPIService} from '../../core/get-api.service';
-import {InputData} from '../../datagird/datagrid/datagrid.component';
-import {ActivatedRoute, Params, Router} from '@angular/router';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {HttpClient} from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { getApiService } from '../../core/api.service';
+import { InputData } from '../../interfaces/InputData';
+import { ActivatedRoute } from '@angular/router';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { productUrl } from '../../../environments/environment';
 
 @Component({
   selector: 'app-item',
@@ -12,26 +12,23 @@ import {HttpClient} from '@angular/common/http';
 })
 export class ItemComponent implements OnInit {
   singleProduct: InputData;
-  productUrl: string = 'http://localhost:3000/products';
-  param: any;
+  param: unknown;
   updateForm: FormGroup;
 
   constructor(
-    private productService: GetAPIService,
+    private productService: getApiService,
     private route: ActivatedRoute,
-    private router: Router,
     private fb: FormBuilder,
-    private postService: GetAPIService
-  ) {
-  }
+    private postService: getApiService
+  ) {}
 
   ngOnInit(): void {
     this.param = this.route.snapshot.paramMap.get('id');
 
     this.productService
-      .getSingleProduct(`${this.productUrl}/${this.param}`)
-      .subscribe((prod: InputData) => {
-        this.singleProduct = prod;
+      .getSingleProduct(`${productUrl}/${this.param}`)
+      .subscribe((productItem: InputData) => {
+        this.singleProduct = productItem;
       });
     this.initializeForm();
   }
@@ -41,15 +38,10 @@ export class ItemComponent implements OnInit {
       id: null,
       name: '',
       net: null,
-
     });
   }
 
   onSubmit(obj: any) {
-    let newItem: any = this.updateForm;
-
-    this.postService.postProduct(obj).subscribe((data) => console.log(data));
+    this.postService.postProduct(obj).subscribe();
   }
-
-
 }

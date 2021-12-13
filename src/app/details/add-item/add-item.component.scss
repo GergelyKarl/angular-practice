@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    height: 34rem;
+    width: 31rem;
+
+    label {
+      font-weight: 800;
+      width: 100%;
+      text-align: center;
+
+      input {
+        margin: 1rem;
+        width: 50%;
+        text-align: left;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    button {
+      margin-top: 30px;
+    }
+  }
+}
