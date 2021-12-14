@@ -1,7 +1,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {NavbarComponent} from './navbar.component';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
-import {getApiService} from '../core/api.service';
+import {getApiService} from '../core/services/api.service';
 
 describe('NavbarComponent', () => {
   let component: NavbarComponent;

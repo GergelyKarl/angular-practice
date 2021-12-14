@@ -1,0 +1,47 @@
+:host {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0px;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.mat-form-field {
+  width: 100%;
+  min-width: 140px;
+}
+
+mat-card-title {
+  margin-bottom: 42px;
+}
+
+mat-card {
+  height: 550px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.button {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  width: 100%;
+
+  button {
+    width: inherit;
+    text-align: center;
+  }
+
+}

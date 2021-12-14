@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProductListComponent } from './product-list.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { getApiService } from '../../core/api.service';
+import { getApiService } from '../../core/services/api.service';
 
 describe('ProductListComponent', () => {
   let component: ProductListComponent;

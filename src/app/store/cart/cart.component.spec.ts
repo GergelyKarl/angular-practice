@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CartComponent } from './cart.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { getApiService } from '../../core/api.service';
+import { getApiService } from '../../core/services/api.service';
 
 describe('CartComponent', () => {
   let component: CartComponent;

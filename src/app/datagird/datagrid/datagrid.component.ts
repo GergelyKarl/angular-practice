@@ -3,7 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { getApiService } from '../../core/api.service';
+import { getApiService } from '../../core/services/api.service';
 import { InputData } from 'src/app/interfaces/InputData';
 
 @Component({

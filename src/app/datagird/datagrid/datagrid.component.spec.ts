@@ -2,7 +2,7 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {DatagridComponent} from './datagrid.component';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
-import {getApiService} from '../../core/api.service';
+import {getApiService} from '../../core/services/api.service';
 import {ReactiveFormsModule} from '@angular/forms';
 
 describe('DatagridComponent', () => {

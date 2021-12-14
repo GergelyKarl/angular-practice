@@ -3,13 +3,16 @@
     <mat-toolbar-row>
       <span routerLink="/">My App</span>
       <span class="example-spacer"></span>
+      <p routerLink="/login">{{isLoggedIn() ? 'Logout' : 'Login'}}</p>
       <p routerLink="/">Home</p>
       <p routerLink="/public">Store</p>
-      <p routerLink="/cart">
-        Cart <span>({{ cartArr.length }})</span>
+      <p routerLink="/cart">Cart <span>({{ cartArr.length }})</span>
       </p>
       <p routerLink="/add">Add Item</p>
       <p routerLink="/">About</p>
     </mat-toolbar-row>
   </mat-toolbar>
 </div>
+
+<ng-template #login><p>asd</p></ng-template>
+<ng-template #logout><p>asd</p></ng-template>

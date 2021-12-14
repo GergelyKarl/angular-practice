@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ItemComponent } from './item.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { getApiService } from '../../core/api.service';
+import { getApiService } from '../../core/services/api.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 

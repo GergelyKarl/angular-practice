@@ -10,6 +10,10 @@ export const productUrl = 'http://localhost:3000/products';
 
 export const cartUrl = 'http://localhost:3000/cart';
 
+export const userUrl='http://localhost:3000/users'
+
+export const loginUrl='http://localhost:3000/login'
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

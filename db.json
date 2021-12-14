@@ -51,49 +51,14 @@
       "net": 23000
     },
     {
-      "id": "addaa",
-      "name": "aaaa",
-      "net": "2222"
+      "id": "11",
+      "name": "erterefghtrz",
+      "net": "456456"
     },
     {
-      "id": "777",
-      "name": "fghfgh",
-      "net": "hjkhjk"
-    },
-    {
-      "id": "vC0xTFi",
-      "name": "",
-      "net": null
-    },
-    {
-      "id": "zWjRspP",
-      "name": "",
-      "net": null
-    },
-    {
-      "id": "AgAZ1pE",
-      "name": "",
-      "net": null
-    },
-    {
-      "id": "4oMp_8l",
-      "name": "",
-      "net": null
-    },
-    {
-      "id": "LuUA9Fx",
-      "name": "",
-      "net": null
-    },
-    {
-      "id": "iX0se7U",
-      "name": "",
-      "net": null
-    },
-    {
-      "id": "WcaoxpP",
-      "name": "",
-      "net": null
+      "id": "12",
+      "name": "gfhfgrtfgh",
+      "net": "456456"
     }
   ],
   "cart": [
@@ -102,72 +67,6 @@
       "name": "product_5",
       "net": 6970,
       "id": 1
-    },
-    {
-      "pid": 6,
-      "name": "product_6",
-      "net": 13650,
-      "id": 2
-    },
-    {
-      "pid": 5,
-      "name": "product_5",
-      "net": 6970,
-      "id": 3
-    },
-    {
-      "pid": 5,
-      "name": "product_5",
-      "net": 6970,
-      "id": 4
-    },
-    {
-      "pid": 6,
-      "name": "product_6",
-      "net": 13650,
-      "id": 5
-    },
-    {
-      "pid": 6,
-      "name": "product_6",
-      "net": 13650,
-      "id": 6
-    },
-    {
-      "pid": 5,
-      "name": "product_5",
-      "net": 6970,
-      "id": 7
-    },
-    {
-      "pid": 1,
-      "name": "product_1",
-      "net": 8900,
-      "id": 8
-    },
-    {
-      "pid": 2,
-      "name": "product_2",
-      "net": 10450,
-      "id": 9
-    },
-    {
-      "pid": 5,
-      "name": "product_5",
-      "net": 6970,
-      "id": 10
-    },
-    {
-      "pid": "777",
-      "name": "fghfgh",
-      "net": "hjkhjk",
-      "id": 11
-    },
-    {
-      "pid": 5,
-      "name": "product_5",
-      "net": 6970,
-      "id": 12
     }
   ],
   "users": [
@@ -180,6 +79,16 @@
       "email": "olivijjer@mail.com",
       "password": "$2a$10$yp2y/vRaVIDhCr1JY5uV9udvXj1CHoWQeEnK6/lLimqN0J1mK6IAW",
       "id": 2
+    },
+    {
+      "email": "bcvbcvbgfhfhfgh@luiozui.com",
+      "password": "$2a$10$/R1KKgsv16skpK/vWmYNBOx4H5Qd.9VBdr0ncYNHhEa1oQT8zjUwi",
+      "id": 3
+    },
+    {
+      "email": "qwe@qwe.hu",
+      "password": "$2a$10$eZ6G30ckgWFUwXOolQNB0OSd/QJeIo5FYwxHE0GnAZhp3mVZNa/Ke",
+      "id": 4
     }
   ]
 }

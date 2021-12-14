@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { getApiService } from '../../../core/api.service';
+import { getApiService } from '../../../core/services/api.service';
 
 @Component({
   selector: 'app-product-item',
@@ -11,7 +11,7 @@ export class ProductItemComponent implements OnInit {
   @Input() name: string;
   @Input() net: number;
   cartArray: Array<any> = [];
- 
+
   constructor(private postCart: getApiService) {}
 
   ngOnInit(): void {}
