@@ -8,10 +8,14 @@ import { InputData } from 'src/app/interfaces/InputData';
 
 @Component({
   selector: 'app-root',
-  styleUrls: ['datagrid.component.css'],
+  styleUrls: ['datagrid.component.scss'],
   templateUrl: 'datagrid.component.html',
 })
 export class DatagridComponent implements OnInit {
+  constructor(private fb: FormBuilder, private productsService: getApiService) {
+    this.dataSource = new MatTableDataSource(this.productArr);
+  }
+
   displayedColumns = ['name', 'cbox', 'net', 'vat', 'gr', 'icon'];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -21,13 +25,6 @@ export class DatagridComponent implements OnInit {
   labels = [27, 20, 5];
   actualVat = 27;
   isChecked = false;
-
-  /**
-   * RV: FormBuilder hasznalata felesleges
-   */
-  constructor(private fb: FormBuilder, private productsService: getApiService) {
-    this.dataSource = new MatTableDataSource(this.productArr);
-  }
 
   getAuto(e: any) {
     this.isChecked = e.checked;

@@ -1,13 +1,13 @@
 <div class="navbar">
   <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <span routerLink="/">My App</span>
+      <p routerLink="/">My App</p>
       <span class="example-spacer"></span>
-      <p routerLink="/login">{{isLoggedIn() ? 'Logout' : 'Login'}}</p>
+      <p routerLink="/login" *ngIf="!isLoggedIn()">Login</p>
+      <p routerLink="/login" *ngIf="isLoggedIn()" (click)="doLogout()">Logout</p>
       <p routerLink="/">Home</p>
       <p routerLink="/public">Store</p>
-      <p routerLink="/cart">Cart <span>({{ cartArr.length }})</span>
-      </p>
+      <p routerLink="/cart">Cart</p>
       <p routerLink="/add">Add Item</p>
       <p routerLink="/">About</p>
     </mat-toolbar-row>

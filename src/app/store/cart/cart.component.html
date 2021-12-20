@@ -1,26 +1,26 @@
-<h1>Cart Content : </h1>
+<h1>Cart Content :</h1>
 <table [dataSource]="cartArray" mat-table>
   <ng-container matColumnDef="id">
-    <th *matHeaderCellDef mat-header-cell> Id</th>
-    <td *matCellDef="let element" mat-cell> {{element.id}} </td>
+    <th *matHeaderCellDef mat-header-cell>Id</th>
+    <td *matCellDef="let element" mat-cell>{{ element.id }}</td>
     <td *matFooterCellDef mat-footer-cell style="width: 200px"></td>
-
   </ng-container>
   <ng-container matColumnDef="name">
-    <th *matHeaderCellDef mat-header-cell> Name</th>
-    <td *matCellDef="let element" mat-cell> {{element.name}} </td>
+    <th *matHeaderCellDef mat-header-cell>Name</th>
+    <td *matCellDef="let element" mat-cell>{{ element.name }}</td>
     <td *matFooterCellDef mat-footer-cell style="width: 200px"></td>
-
   </ng-container>
   <ng-container matColumnDef="net">
-    <th *matHeaderCellDef mat-header-cell> Price</th>
-    <td *matCellDef="let element" mat-cell> {{element.net}}</td>
-    <td *matFooterCellDef mat-footer-cell><span
-      style="font-weight: 600;font-size: 16px">Total: {{calcSum() | number }}</span></td>
+    <th *matHeaderCellDef mat-header-cell>Price</th>
+    <td *matCellDef="let element" mat-cell>{{ element.net }}</td>
+    <td *matFooterCellDef mat-footer-cell>
+      <span style="font-weight: 600; font-size: 16px"
+        >Total: {{ calcSum() }}</span
+      >
+    </td>
   </ng-container>
 
   <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
-  <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
-  <tr *matFooterRowDef="['id','name','net']" mat-footer-row></tr>
-
+  <tr *matRowDef="let row; columns: displayedColumns" mat-row></tr>
+  <tr *matFooterRowDef="['id', 'name', 'net']" mat-footer-row></tr>
 </table>

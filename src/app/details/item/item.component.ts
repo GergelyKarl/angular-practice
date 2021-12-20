@@ -41,7 +41,7 @@ export class ItemComponent implements OnInit {
     });
   }
 
-  onSubmit(obj: any) {
+  onSubmit(obj: InputData) {
     this.postService.postProduct(obj).subscribe();
   }
 }

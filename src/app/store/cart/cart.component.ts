@@ -5,7 +5,7 @@ import { getApiService } from '../../core/services/api.service';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css'],
+  styleUrls: ['./cart.component.scss'],
 })
 export class CartComponent implements OnInit {
   cartArray: InputData[] = [];
@@ -22,7 +22,7 @@ export class CartComponent implements OnInit {
     });
   }
 
-  calcSum() {
+  calcSum(): number {
     return this.cartArray
       .map((t) => t.net)
       .reduce((acc, value) => acc + value, 0);

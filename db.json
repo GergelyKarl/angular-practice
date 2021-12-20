@@ -49,46 +49,14 @@
       "id": 10,
       "name": "product_10",
       "net": 23000
-    },
-    {
-      "id": "11",
-      "name": "erterefghtrz",
-      "net": "456456"
-    },
-    {
-      "id": "12",
-      "name": "gfhfgrtfgh",
-      "net": "456456"
     }
   ],
-  "cart": [
-    {
-      "pid": 5,
-      "name": "product_5",
-      "net": 6970,
-      "id": 1
-    }
-  ],
+  "cart": [],
   "users": [
     {
-      "email": "olivier@mail.com",
-      "password": "$2a$10$ELizB24IVav60i4Lpa0QU.gSO2O0KHphbdBb2qBNy5CoRno.3NqqC",
-      "id": 1
-    },
-    {
-      "email": "olivijjer@mail.com",
-      "password": "$2a$10$yp2y/vRaVIDhCr1JY5uV9udvXj1CHoWQeEnK6/lLimqN0J1mK6IAW",
-      "id": 2
-    },
-    {
-      "email": "bcvbcvbgfhfhfgh@luiozui.com",
-      "password": "$2a$10$/R1KKgsv16skpK/vWmYNBOx4H5Qd.9VBdr0ncYNHhEa1oQT8zjUwi",
-      "id": 3
-    },
-    {
       "email": "qwe@qwe.hu",
-      "password": "$2a$10$eZ6G30ckgWFUwXOolQNB0OSd/QJeIo5FYwxHE0GnAZhp3mVZNa/Ke",
-      "id": 4
+      "password": "$2a$10$TY8soLMJjL/RHXc8Hhr87Ofcb4eDlWsM3JHc.U2bnbgDxaI.KjyVy",
+      "id": 1
     }
   ]
 }

@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AddItemComponent } from './add-item.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { getApiService } from '../../core/services/api.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('AddItemComponent', () => {
   let component: AddItemComponent;
@@ -8,9 +11,10 @@ describe('AddItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddItemComponent ]
-    })
-    .compileComponents();
+      declarations: [AddItemComponent],
+      imports: [ReactiveFormsModule, HttpClientTestingModule],
+      providers: [getApiService],
+    }).compileComponents();
   });
 
   beforeEach(() => {
